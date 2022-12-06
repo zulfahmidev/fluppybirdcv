@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            /* background-image: url(assets/sprites/background-day.png);
+            background-size: auto 100%; */
+            background-color: lightblue;
+        }
+        canvas {
+            display: block;
+        }
+        video {
+            position: fixed;
+            bottom: 10px;
+            z-index: 99;
+            right: -50px;
+        }
+        #point {
+            position: fixed;
+            top: 1rem;
+            font-size: 32px;
+            font-family: Arial;
+            font-weight: bold;
+            color: white;
+            right: 1rem;
+        }
+    </style>
+</head>
+<body style="margin: 0">
+    <div id="point">Point: <span id="point_score">0</span></div>
+    <video id="video" autoplay muted playsinline></video>
+    <canvas></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"> </script>
+    <script src="assets/p5.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
