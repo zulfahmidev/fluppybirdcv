@@ -135,5 +135,8 @@ handTrack.load().then(m => {
     }, 5000)
 });
 
-navigator.mediaDevices.getUserMedia({audio: false, video: {facingMode: 'enviroment'}})
-.then(function(stream) { video.srcObject = stream; });
+navigator.mediaDevices.enumerateDevices().then((devices) => {
+    let deviceId = devices[1].deviceId;
+    navigator.mediaDevices.getUserMedia({audio: false, video: {facingMode: 'user', deviceId}})
+    .then(function(stream) { video.srcObject = stream; });
+})
